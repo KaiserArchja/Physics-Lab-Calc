@@ -66,7 +66,27 @@ std::map<std::string, double> LeastSquare(std::vector<double> x, std::vector<dou
 }
 
 void LeastSquare(){
-    
-    std::cout << std::endl << "X points: (seperated by space)" << std::endl;
+    int N;
+    std::vector<double> x, y;
+    std::cout << std::endl << "Number of points:" << std::endl;
+    std::cin >> N;
+    std::cout << std::endl << "X of points (seperated by space):" << std::endl;
+    for(int i = 0; i < N; i++){
+        double *hlp = new double;
+        std::cin >> *hlp;
+        x.push_back(*hlp);
+        delete hlp;
+    }
+    std::cout << std::endl << "Y of points (seperated by space):" << std::endl;
+    for(int i = 0; i < N; i++){
+        double *hlp = new double;
+        std::cin >> *hlp;
+        y.push_back(*hlp);
+        delete hlp;
+    }
+    std::map<std::string, double> reg = LeastSquare(x, y);
+    std::cout << std::endl << "Slope: " << reg["Slope"] << "\t" << "Y-Intercept: " << reg["Y-Intercept"] << std::endl;
+    std::cout << std::endl << "Slope Error: " << reg["Slope Error"] << "\t" << "Y-Intercept Error: " << reg["Y-Intercept Error"] << std::endl;
+    std::cout << std::endl << "0Slope: " << reg["0Slope"] << "\t" << "0Slope Error: " << reg["0Slope Error"] << std::endl;
 
 }
