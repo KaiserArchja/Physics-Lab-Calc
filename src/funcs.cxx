@@ -64,3 +64,9 @@ std::map<std::string, double> LeastSquare(std::vector<double> x, std::vector<dou
     
     return reg;
 }
+
+void LeastSquare(){
+    
+    std::cout << std::endl << "X points: (seperated by space)" << std::endl;
+
+}
