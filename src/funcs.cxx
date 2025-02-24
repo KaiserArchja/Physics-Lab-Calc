@@ -85,8 +85,8 @@ void LeastSquare(){
         delete hlp;
     }
     std::map<std::string, double> reg = LeastSquare(x, y);
-    std::cout << std::endl << "Slope: " << reg["Slope"] << "\t" << "Y-Intercept: " << reg["Y-Intercept"] << std::endl;
-    std::cout << std::endl << "Slope Error: " << reg["Slope Error"] << "\t" << "Y-Intercept Error: " << reg["Y-Intercept Error"] << std::endl;
-    std::cout << std::endl << "0Slope: " << reg["0Slope"] << "\t" << "0Slope Error: " << reg["0Slope Error"] << std::endl;
+    std::cout << std::endl << "Slope: " << std::setprecision(9) << reg["Slope"] << "\t" << "Y-Intercept: " << reg["Y-Intercept"] << std::endl;
+    std::cout << std::endl << "Slope Error: " << std::setprecision(9) << reg["Slope Error"] << "\t" << "Y-Intercept Error: " << reg["Y-Intercept Error"] << std::endl;
+    std::cout << std::endl << "0Slope: " << std::setprecision(9) << reg["0Slope"] << "\t" << "0Slope Error: " << reg["0Slope Error"] << std::endl;
 
 }
